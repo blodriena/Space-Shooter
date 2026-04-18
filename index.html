@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Void Strike — 3D Space Shooter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game-root">
+  <div id="hud">
+    <div class="hud-box">SCORE: <span id="score-val">0</span></div>
+    <div class="hud-box">LEVEL: <span id="level-val">1</span></div>
+    <div class="hud-box">LIVES: <span id="lives-val">♦♦♦</span></div>
+  </div>
+
+  <div id="health-bar-wrap">
+    <div id="health-bar-bg"><div id="health-bar"></div></div>
+    <div id="health-label">SHIELD</div>
+  </div>
+
+  <div id="controls-hint">WASD / ↑↓←→ move &nbsp;|&nbsp; SPACE shoot</div>
+
+  <div id="overlay">
+    <h1>VOID STRIKE</h1>
+    <p>Pilot your fighter through the asteroid belt</p>
+    <p>Shoot enemies for points — survive as long as you can</p>
+    <button id="start-btn">LAUNCH</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>

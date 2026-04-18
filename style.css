@@ -1,0 +1,111 @@
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #000; display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: monospace; }
+
+    #game-root {
+      position: relative;
+      width: 900px;
+      height: 560px;
+      background: #000;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(100,200,255,0.2);
+      box-shadow: 0 0 40px rgba(0,150,255,0.15);
+    }
+
+    #game-root canvas { display: block; width: 100% !important; height: 100% !important; }
+
+    #hud {
+      position: absolute;
+      top: 12px; left: 0; right: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 18px;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .hud-box {
+      background: rgba(0,0,0,0.55);
+      border: 1px solid rgba(100,200,255,0.35);
+      border-radius: 8px;
+      padding: 6px 14px;
+      color: #7df;
+      font-size: 13px;
+    }
+
+    #health-bar-wrap {
+      position: absolute;
+      bottom: 16px; left: 50%;
+      transform: translateX(-50%);
+      width: 220px;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    #health-bar-bg {
+      background: rgba(0,0,0,0.5);
+      border: 1px solid rgba(100,200,255,0.3);
+      border-radius: 6px;
+      height: 10px;
+      width: 100%;
+    }
+
+    #health-bar {
+      height: 10px;
+      border-radius: 6px;
+      background: linear-gradient(90deg, #0f8, #0cf);
+      width: 100%;
+      transition: width 0.2s, background 0.3s;
+    }
+
+    #health-label { text-align: center; color: #8df; font-size: 11px; margin-top: 3px; }
+
+    #controls-hint {
+      position: absolute;
+      bottom: 44px; right: 16px;
+      color: rgba(100,200,255,0.4);
+      font-size: 11px;
+      pointer-events: none;
+      text-align: right;
+      z-index: 10;
+    }
+
+    #overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,10,0.82);
+      z-index: 20;
+      border-radius: 14px;
+    }
+
+    #overlay h1 {
+      color: #7df;
+      font-size: 34px;
+      letter-spacing: 5px;
+      text-shadow: 0 0 22px #3af;
+      margin-bottom: 10px;
+    }
+
+    #overlay p { color: #8bc; font-size: 13px; margin: 4px 0; }
+
+    #start-btn {
+      margin-top: 22px;
+      padding: 11px 36px;
+      background: linear-gradient(135deg, #0af, #05f);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-family: monospace;
+      cursor: pointer;
+      letter-spacing: 2px;
+      box-shadow: 0 0 22px rgba(0,170,255,0.5);
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    #start-btn:hover { background: linear-gradient(135deg, #3cf, #27f); transform: scale(1.04); }
+    #start-btn:active { transform: scale(0.97); }
